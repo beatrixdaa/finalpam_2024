@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">finalpam_2024</string>
+    <string name="Laki">Laki-laki</string>
+    <string name="Wanita">Perempuan</string>
+    <string name="register">Register</string>
 </resources>
