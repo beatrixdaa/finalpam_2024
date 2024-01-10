@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
+import com.example.finalpam_2024.halaman.DestinasiHome
 
 @Composable
 fun HostNavigasi(
@@ -12,7 +13,7 @@ fun HostNavigasi(
 ) {
     NavHost(
         navController = navController,
-        startDestination =DestinasiHome.route,
+        startDestination = DestinasiHome.route,
         modifier = Modifier
     ) {
         composable(DestinasiHome.route) {

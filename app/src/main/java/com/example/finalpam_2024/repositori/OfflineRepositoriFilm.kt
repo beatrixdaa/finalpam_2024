@@ -4,7 +4,7 @@ import com.example.finalpam_2024.data.Film
 import com.example.finalpam_2024.data.FilmDao
 import kotlinx.coroutines.flow.Flow
 
-class OfflineRepositori(private val filmDao: FilmDao):RepositoriFilm {
+class OfflineRepositoriFilm(private val filmDao: FilmDao):RepositoriFilm {
 
     override fun getAllFilmStream(): Flow<List<Film>> = filmDao.getAllFilm()
 
