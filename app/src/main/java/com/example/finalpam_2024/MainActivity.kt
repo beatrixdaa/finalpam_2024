@@ -1,4 +1,4 @@
-package com.example.finalpam_20244
+package com.example.finalpam_2024
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.finalpam_2024.navigasi.FilmApp
 import com.example.finalpam_2024.ui.theme.Finalpam_2024Theme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                   FilmApp()
                 }
             }
         }

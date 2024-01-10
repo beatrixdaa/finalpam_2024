@@ -1,10 +1,26 @@
 <resources>
     <string name="app_name">finalpam_2024</string>
-    <string name="Login">Login</string>
-    <string name="Email">Email</string>
-    <string name="Password">Password</string>
-    <string name="Register">Register</string>
-    <string name="btnReset">btnReset</string>
-    <string name="btnCancel">btnCancel</string>
-    <string name="editBox">editBox</string>
+    <string name="entry_Film">Tambah Film</string>
+    <string name="deskripsi_no_item">Tidak ada data Film.Tap + untuk menambah data</string>
+    <string name="nama">Nama Film*</string>
+    <string name="alamat">Alamat Film*</string>
+    <string name="telepon">Telepon Film*</string>
+    <string name="nama1">Nama Film:</string>
+    <string name="alamat1">Alamat Film:</string>
+    <string name="telepon1">Telepon Film:</string>
+    <string name="btn_submit">Submit</string>
+    <string name="back">Back</string>
+    <string name="no">Tidak</string>
+    <string name="yes">Ya</string>
+    <string name="delete">Hapus</string>
+    <string name="update">Edit</string>
+    <string name="attention">Perhatian</string>
+    <string name="tanya">Apakah anda yakin menghapus ini?</string>
+    <string name="detail_Film">Detail Film</string>
+    <string name="edit_Film">Edit Film</string>
+    <string name="required_field">* required fields</string>
+    <string name="judul">* jdl</string>
+    <string name="genre">* gre</string>
+    <string name="tahun_rilis">*tr</string>
+    <string name="id">* i</string>
 </resources>
