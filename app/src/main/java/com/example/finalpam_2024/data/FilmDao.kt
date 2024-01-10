@@ -27,5 +27,13 @@ interface FilmDao {
     fun getAllFilm(): Flow<List<Film>>
 }
 
+@Dao
+interface MemberDao {
+
+    @Query("SELECT * from tblMember WHERE id = :id")
+    fun getMember(id: Int): Flow<Member>
+
+}
+
 
 
