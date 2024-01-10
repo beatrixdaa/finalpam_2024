@@ -2,9 +2,19 @@ package com.example.finalpam_2024.navigasi
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.BlendMode.Companion.Screen
 import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
+import com.example.finalpam_2024.halaman.DestinasiEntry
 import com.example.finalpam_2024.halaman.DestinasiHome
+import com.example.finalpam_2024.halaman.DetailsDestination
+import com.example.finalpam_2024.halaman.DetailsScreen
+import com.example.finalpam_2024.halaman.EntryFilmScreen
+import com.example.finalpam_2024.halaman.HomeScreen
+import com.example.finalpam_2024.halaman.ItemEditDestination
+import com.example.finalpam_2024.halaman.ItemEditScreen
 
 @Composable
 fun HostNavigasi(
@@ -24,12 +34,13 @@ fun HostNavigasi(
             )
         }
         composable(DestinasiEntry.route) {
-            EntrySiswaScreen(navigateBack = { navController.popBackStack() },
+            EntryFilmScreen(navigateBack = { navController.popBackStack() },
             )
         }
         composable(
             DetailsDestination.routeWithArgs,
-            arguments = listOf(navArgument(DetailsDestination.siswaIdArg)  {
+            arguments = listOf(navArgument(DetailsDestination.Film
+                    IdArg)  {
                 type = NavType.IntType
             })
         ){

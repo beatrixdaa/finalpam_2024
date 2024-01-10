@@ -3,7 +3,8 @@ package com.example.finalpam_2024.model
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.finalpam_2024.repository.RepositoriFilm
+import com.example.finalpam_2024.halaman.DetailsDestination
+import com.example.finalpam_2024.repositori.RepositoriFilm
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.filterNotNull
@@ -26,7 +27,7 @@ class DetailsViewModel(
             )
 
     suspend fun deleteItem() {
-        repositoriFilm.deleeteFilm(uiState.value.detailFilm.toFilm())
+        repositoriFilm.deleteFilm(uiState.value.detailFilm.toFilm())
     }
     companion object{
         private const val TIMEOUT_MILLIS = 5_000L
@@ -36,5 +37,5 @@ class DetailsViewModel(
 
 data class ItemDetailUiState (
     val outOfStock: Boolean = true,
-    val detailFilm: DetailFilm = DetailFilm(),
+    val detailFilm: UIStateFilm.DetailFilm = UIStateFilm.DetailFilm(),
 )

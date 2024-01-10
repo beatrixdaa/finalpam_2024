@@ -15,6 +15,10 @@ import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.finalpam_2024.R
+import com.example.finalpam_2024.halaman.DestinasiEntry
+import com.example.finalpam_2024.halaman.DestinasiHome
+import com.example.finalpam_2024.halaman.EntryFilmScreen
+import com.example.finalpam_2024.halaman.HomeScreen
 
 @Composable
 fun FilmApp(navController: NavHostController = rememberNavController()){
@@ -71,4 +75,5 @@ fun HostNavigasi(
         }
     }
 }
+
 

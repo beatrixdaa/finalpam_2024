@@ -22,7 +22,6 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.finalpam_2024.R
-import com.example.finalpam_2024.model.DetailFilm
 import com.example.finalpam_2024.model.EntryViewModel
 import com.example.finalpam_2024.model.PenyediaViewModel
 import com.example.finalpam_2024.model.UIStateFilm
@@ -74,7 +73,7 @@ fun EntryFilmScreen(
 @Composable
 fun EntryFilmBody(
     uiStateFilm: UIStateFilm,
-    onFilmValueChange:(DetailFilm) -> Unit,
+    onFilmValueChange:(UIStateFilm.DetailFilm) -> Unit,
     onSaveClick: () -> Unit,
     modifier : Modifier = Modifier
 ){
@@ -101,9 +100,9 @@ fun EntryFilmBody(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormInputFilm(
-    detailFilm: DetailFilm,
+    detailFilm: UIStateFilm.DetailFilm,
     modifier: Modifier = Modifier,
-    onValueChange: (DetailFilm) -> Unit = {},
+    onValueChange: (UIStateFilm.DetailFilm) -> Unit = {},
     enabled: Boolean = true
 ) {
     Column (

@@ -8,7 +8,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.finalpam_2024.halaman.ItemEditDestination
 import com.example.finalpam_2024.repositori.RepositoriFilm
-import com.example.finalpam_2024.repository.RepositoriFilm
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -25,27 +24,31 @@ class EditViewModel(
             FilmUiState = repositoriFilm.getFilmStream(itemId)
                 .filterNotNull()
                 .first()
-                .toUiStateFilm(true)
+                .toUIStateFilm(true)
         }
     }
     suspend fun updateFilm () {
-        if (validasiInput(FilmUiState.detaiFilm)) {
-            repositoriFilm.updateFilm(FilmUiState.detaiFilm.toFilm())
+        if (validasiInput(FilmUiState.detailFilm)) {
+            repositoriFilm.updateFilm(FilmUiState.detailFilm.toFilm())
         }
         else {
             println("Data tidak valid")
         }
     }
 
-    fun updateUiState (detaiFilm: DetaiFilm) {
-        FilmUiState = UIStateFilm(detaiFilm = detaiFilm, isEntryValid = validasiInput(detaiFilm))
+    fun updateUiState (detailFilm: UIStateFilm.DetailFilm) {
+        FilmUiState = UIStateFilm(detailFilm = detailFilm, isEntryValid = validasiInput(detailFilm))
     }
 
-    private fun validasiInput(uiState: DetaiFilm = FilmUiState.detaiFilm ): Boolean {
+    private fun validasiInput(uiState: UIStateFilm.DetailFilm = FilmUiState.detailFilm ): Boolean {
         return with(uiState) {
-            nama.isNotBlank() && alamat.isNotBlank() && telpon.isNotBlank()
+           judul.isNotBlank() &&genre.isNotBlank() && tahun_rilis.isNotBlank()
         }
     }
 }
+
+
+
+
 
 
