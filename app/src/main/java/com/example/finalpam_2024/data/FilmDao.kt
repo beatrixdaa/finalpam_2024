@@ -23,20 +23,9 @@ interface FilmDao {
     @Query("SELECT * from tblFilm WHERE id = :id")
     fun getFilm(id: Int): Flow<Film>
 
-    @Query("SELECT * from tblFilm ORDER BY judul ASC")
+    @Query("SELECT * from tblFilm ORDER BY id ASC")
     fun getAllFilm(): Flow<List<Film>>
 }
 
-@Dao
-interface MemberDao {
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(member: Member)
-
-    @Delete
-    suspend fun delete(member: Member)
-
-    @Query("SELECT * from tblMember")
-    fun getMember(): Flow<List<Member>>
-}
 
