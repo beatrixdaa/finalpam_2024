@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterial3Api::class)
+
 package com.example.finalpam_2024
 
 import android.os.Bundle
@@ -29,7 +31,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.Placeholder
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.TextFieldValue
-import androidx.compose.ui.tooling.preview.Preview
+
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.finalpam_2024.navigasi.FilmApp
@@ -55,12 +57,6 @@ class MainActivity : ComponentActivity() {
 
 
 
-
-
-
-
-
-
 @Composable
 fun MyApp(modifier: Modifier = Modifier, list: List<String>) {
     Column(modifier.fillMaxSize()) {
@@ -68,7 +64,6 @@ fun MyApp(modifier: Modifier = Modifier, list: List<String>) {
         val textState = remember {
             mutableStateOf(TextFieldValue(""))
         }
-
         SearchView(state = textState , placeHolder = "Search here...", modifier = modifier)
 
         val searchedText = textState.value.text
@@ -92,13 +87,12 @@ fun ColumnItem(item: String){
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchView(
     state: MutableState<TextFieldValue>,
     placeholder: String,
     modifier: Modifier
-) {
+){
     TextField(
         value = state.value,
         onValueChange = {value->
@@ -109,7 +103,7 @@ fun SearchView(
             .padding(20.dp)
             .clip(RoundedCornerShape(30.dp))
             .border(2.dp, Color.DarkGray, RoundedCornerShape(30.dp)),
-        placeholder ={
+        placeholder = {
             Text(text = placeholder)
         },
         colors = TextFieldDefaults.textFieldColors(
@@ -120,6 +114,5 @@ fun SearchView(
         textStyle = TextStyle(
             color = Color.Black, fontSize = 20.sp
         )
-
     )
 }
