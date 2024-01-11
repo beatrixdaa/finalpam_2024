@@ -1,4 +1,4 @@
-package com.example.finalpam_2024.ui.model
+package com.example.finalpam_2024.model
 
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth

@@ -1,5 +1,6 @@
 package com.example.finalpam_2024.halaman
 
+import androidx.appcompat.widget.SearchView
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -26,6 +27,8 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -35,6 +38,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -44,6 +48,7 @@ import com.example.finalpam_2024.data.Film
 import com.example.finalpam_2024.model.HomeViewModel
 import com.example.finalpam_2024.model.PenyediaViewModel
 import com.example.finalpam_2024.navigasi.FilmTopAppBar
+
 
 object DestinasiHome : DestinasiNavigasi {
     override val route = "home"
@@ -67,6 +72,9 @@ fun HomeScreen (
 
 
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
+    val searchBarState = remember { mutableStateOf(TextFieldValue("")) }
+
+
     Scaffold(
         modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
@@ -92,13 +100,23 @@ fun HomeScreen (
     ) {
             innerPadding  ->
         val uiStateFilm by viewModel.homeUiState.collectAsState()
-        BodyHome (
-            itemFilm = uiStateFilm.listFilm,
+
+        Column(
             modifier = Modifier
                 .padding(innerPadding)
-                .fillMaxSize(),
-            onFilmClick = onDetailClick
-        )
+                .fillMaxSize()
+        ) {
+
+            val searchedText = searchBarState.value.text
+
+            BodyHome(
+                itemFilm = uiStateFilm.listFilm,
+                modifier = Modifier
+                    .padding(innerPadding)
+                    .fillMaxSize(),
+                onFilmClick = onDetailClick
+            )
+        }
     }
 }
 @Composable
@@ -143,7 +161,7 @@ fun ListFilm(
                     Film = person,
                     modifier = Modifier
                         .padding(dimensionResource(id = R.dimen.padding_small))
-                        .clickable{onItemClick(person)}
+                        .clickable { onItemClick(person) }
                 )
             }
         }
