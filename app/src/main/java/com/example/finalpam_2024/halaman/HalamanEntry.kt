@@ -36,7 +36,7 @@ object DestinasiEntry: DestinasiNavigasi {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun EntryFilmScreen(
+fun EntryScreen(
     navigateBack: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: EntryViewModel = viewModel(factory = PenyediaViewModel.Factory)
@@ -136,8 +136,9 @@ fun FormInputFilm(
         )
         if(enabled) {
             Text(
-                text = stringResource(id = R.string.required_field),
-                modifier = Modifier.padding(start = dimensionResource(id = R.dimen.padding_medium))
+                text = stringResource(id = R.string.harus_di_isi,
+
+                )
             )
         }
         Divider (

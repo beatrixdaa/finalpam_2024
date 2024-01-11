@@ -213,7 +213,7 @@ private fun DeleteConfirmationDialog(
     modifier : Modifier = Modifier
 ){
     AlertDialog(onDismissRequest = { /*Do nothing */ },
-        title = { Text(stringResource(R.string.attention )) },
+        title = { Text(stringResource(R.string.perhatian )) },
         text = { Text(stringResource(R.string.delete)) },
         modifier = modifier,
         dismissButton = {

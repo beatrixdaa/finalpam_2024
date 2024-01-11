@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">finalpam_2024</string>
+    <string name="app_name">DAFTAR FILM</string>
     <string name="entry_Film">Tambah Film</string>
-    <string name="deskripsi_no_item">Tidak ada data Film.Tap + untuk menambah data</string>
+    <string name="deskripsi_no_item">Tidak ada data Film.Tap + untuk menambah film</string>
     <string name="nama">Nama Film*</string>
     <string name="alamat">Alamat Film*</string>
     <string name="telepon">Telepon Film*</string>
@@ -14,18 +14,19 @@
     <string name="yes">Ya</string>
     <string name="delete">Hapus</string>
     <string name="update">Edit</string>
-    <string name="attention">Perhatian</string>
-    <string name="tanya">Apakah anda yakin menghapus ini?</string>
+    <string name="perhatian">Perhatian</string>
+    <string name="tanya">Yakin menghapus ini?</string>
     <string name="detail_Film">Detail Film</string>
+    <string name="add_film">Detail Film</string>
     <string name="to_Film">Detail Film</string>
     <string name="edit_Film">Edit Film</string>
-    <string name="required_field">* required fields</string>
-    <string name="judul">* judul</string>
+    <string name="harus_di_isi">* wajib di isi*</string>
+    <string name="judul">* Judul</string>
     <string name="genre">* genre</string>
-    <string name="tahun_rilis">*tahun rilis</string>
+    <string name="tahun_rilis">*Tahun Rilis</string>
     <string name="id">* i</string>
-    <string name="sign_up">* i</string>
-    <string name="email">* E</string>
+    <string name="sign_up">* Sign Up</string>
+    <string name="email">* Email</string>
     <string name="login">* login</string>
     <string name="username">* Username</string>
     <string name="password">* Password</string>

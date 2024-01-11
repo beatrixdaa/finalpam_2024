@@ -18,8 +18,11 @@ import androidx.navigation.compose.rememberNavController
 import com.example.finalpam_2024.R
 import com.example.finalpam_2024.halaman.DestinasiEntry
 import com.example.finalpam_2024.halaman.DestinasiHome
-import com.example.finalpam_2024.halaman.EntryFilmScreen
+
+import com.example.finalpam_2024.halaman.EntryScreen
 import com.example.finalpam_2024.halaman.HomeScreen
+import com.example.finalpam_2024.ui.screen.LoginScreen
+import com.example.finalpam_2024.ui.screen.SignUpScreen
 
 @Composable
 fun FilmApp(navController: NavHostController = rememberNavController()){
@@ -44,7 +47,8 @@ fun FilmTopAppBar(
                 IconButton(onClick = navigateUp) {
                     Icon(
                         imageVector = Icons.Filled.ArrowBack,
-                        contentDescription = stringResource(id = R.string.back)
+                        contentDescription = stringResource(
+                            id = R.string.back)
                     )
                 }
             }
@@ -61,17 +65,29 @@ fun HostNavigasi(
     modifier: Modifier = Modifier
 ) {
     NavHost( navController = navController,
-        startDestination = DestinasiHome.route,
+        startDestination  = R.string.login.toString(),
         modifier = Modifier
-    )
-    {
+
+    ) {
+
+        composable("login"){
+            LoginScreen(
+                navigateToHome = {navController.navigate("home")},
+                navigateToSignUp = {navController.navigate("signup")}
+            )
+        }
+        composable("signup"){
+            SignUpScreen (
+                navigateToLogin = {navController.popBackStack()}
+            )
+        }
         composable(DestinasiHome.route) {
             HomeScreen(
                 navigateToItemEntry = { navController.navigate(DestinasiEntry.route) },
             )
         }
         composable(DestinasiEntry.route) {
-            EntryFilmScreen(navigateBack = { navController.popBackStack() })
+            EntryScreen(navigateBack = { navController.popBackStack() })
         }
     }
 }

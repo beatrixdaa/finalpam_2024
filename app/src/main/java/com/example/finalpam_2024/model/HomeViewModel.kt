@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.stateIn
 
 class HomeViewModel(private val repositoriFilm: RepositoriFilm): ViewModel(){
     companion object {
-        private const val  TIMEOUT_MILLIS = 5_000L
+        private const val  TIMEOUT_MILLIS = 10_000L
     }
 
     val homeUiState: StateFlow<HomeUiState> = repositoriFilm.getAllFilmStream()
