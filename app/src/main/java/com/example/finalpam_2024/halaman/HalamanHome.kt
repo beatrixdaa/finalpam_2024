@@ -43,6 +43,7 @@ import com.example.finalpam_2024.R
 import com.example.finalpam_2024.data.Film
 import com.example.finalpam_2024.model.HomeViewModel
 import com.example.finalpam_2024.model.PenyediaViewModel
+import com.example.finalpam_2024.navigasi.DestinasiNavigasi
 import com.example.finalpam_2024.navigasi.FilmTopAppBar
 
 object DestinasiHome : DestinasiNavigasi {
@@ -50,11 +51,7 @@ object DestinasiHome : DestinasiNavigasi {
     override val titleRes = R.string.app_name
 }
 
-interface DestinasiNavigasi {
 
-    val titleRes: Int
-    val route: String
-}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

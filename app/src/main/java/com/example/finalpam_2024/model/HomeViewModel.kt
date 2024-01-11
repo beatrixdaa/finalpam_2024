@@ -27,8 +27,6 @@ class HomeViewModel(private val repositoriFilm: RepositoriFilm): ViewModel(){
     data class HomeUiState(
         val listFilm: List<Film> = listOf()
     )
-    private val _searchResults = MutableStateFlow<List<Film>>(emptyList())
-    val searchResults: StateFlow<List<Film>> = _searchResults
 
 
     }

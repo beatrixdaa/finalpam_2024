@@ -27,7 +27,8 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import com.example.finalpam_2024.R
-import com.example.finalpam_2024.halaman.DestinasiNavigasi
+
+import com.example.finalpam_2024.navigasi.DestinasiNavigasi
 import com.google.firebase.auth.FirebaseAuth
 
 

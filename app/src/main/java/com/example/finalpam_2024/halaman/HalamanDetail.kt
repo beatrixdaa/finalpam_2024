@@ -40,6 +40,7 @@ import com.example.finalpam_2024.model.DetailsViewModel
 import com.example.finalpam_2024.model.ItemDetailUiState
 import com.example.finalpam_2024.model.PenyediaViewModel
 import com.example.finalpam_2024.model.toFilm
+import com.example.finalpam_2024.navigasi.DestinasiNavigasi
 import com.example.finalpam_2024.navigasi.FilmTopAppBar
 import kotlinx.coroutines.launch
 
