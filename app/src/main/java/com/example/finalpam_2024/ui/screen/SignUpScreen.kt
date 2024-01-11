@@ -31,13 +31,14 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.finalpam_2024.R
 import com.example.finalpam_2024.navigasi.DestinasiNavigasi
 import com.example.finalpam_2024.ui.model.SignUpViewModel
 import kotlinx.coroutines.launch
 
 object DestinasiSignUp: DestinasiNavigasi {
-    override val route: "signUp"
-    override val titleRes:
+    override val route = "signUp"
+    override val titleRes = R.string.app_name
 
 }
 
@@ -59,7 +60,7 @@ fun SignUpScreen(navigateToLogin: () -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = stringResource("Sign Up"),
+            text = stringResource(R.string.sign_up),
             style = MaterialTheme.typography.headlineMedium,
             color = Color.Yellow
         )
@@ -68,7 +69,7 @@ fun SignUpScreen(navigateToLogin: () -> Unit) {
         OutlinedTextField(
             value = emailState.value,
             onValueChange = { emailState.value = it},
-            label = { Text(stringResource("Email")) },
+            label = { Text(stringResource(R.string.email)) },
             keyboardOptions = KeyboardOptions.Default.copy(
                 keyboardType = KeyboardType.Email
             ),
@@ -84,7 +85,7 @@ fun SignUpScreen(navigateToLogin: () -> Unit) {
         OutlinedTextField(
             value = passwordState.value,
             onValueChange = { passwordState.value = it },
-            label = { Text(stringResource("Password")) },
+            label = { Text(stringResource(R.string.password)) },
             keyboardOptions = KeyboardOptions.Default.copy(
                 keyboardType = KeyboardType.Password
             ),
@@ -113,7 +114,7 @@ fun SignUpScreen(navigateToLogin: () -> Unit) {
                 .height(56.dp)
 
         )  {
-            Text(stringResource("Sign Up"))
+            Text(stringResource(R.string.sign_up))
 
 
         }
