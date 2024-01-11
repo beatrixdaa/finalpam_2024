@@ -4,11 +4,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.finalpam_2024.data.Film
 import com.example.finalpam_2024.repositori.RepositoriFilm
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 
 class HomeViewModel(private val repositoriFilm: RepositoriFilm): ViewModel(){
     companion object {
@@ -25,4 +27,8 @@ class HomeViewModel(private val repositoriFilm: RepositoriFilm): ViewModel(){
     data class HomeUiState(
         val listFilm: List<Film> = listOf()
     )
-}
+    private val _searchResults = MutableStateFlow<List<Film>>(emptyList())
+    val searchResults: StateFlow<List<Film>> = _searchResults
+
+
+    }
