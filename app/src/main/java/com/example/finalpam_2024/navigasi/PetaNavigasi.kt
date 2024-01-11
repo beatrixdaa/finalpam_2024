@@ -2,7 +2,6 @@ package com.example.finalpam_2024.navigasi
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -20,9 +19,8 @@ import com.example.finalpam_2024.halaman.ItemEditScreen
 
 @Composable
 fun HostNavigasi(
-    navController: NavHostController,
-    modifier: Modifier = Modifier
-) {
+    navController : NavHostController,
+){
     NavHost(
         navController = navController,
         startDestination =DestinasiHome.route,

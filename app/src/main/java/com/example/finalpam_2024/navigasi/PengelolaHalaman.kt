@@ -23,7 +23,7 @@ import com.example.finalpam_2024.halaman.HomeScreen
 
 @Composable
 fun FilmApp(navController: NavHostController = rememberNavController()){
-    HostNavigasi(navController = navController)
+    HostNavigasi(navController=navController)
 }
 
 
@@ -75,3 +75,4 @@ fun HostNavigasi(
         }
     }
 }
+
