@@ -103,7 +103,7 @@ fun LoginScreen(
                 }
             Spacer(modifier = Modifier.height(10.dp))
         Text(
-            text ="belum ada akunN ? sign up dulu",
+            text ="belum ada akun? sign up dulu",
             style = MaterialTheme.typography.bodyMedium,
             color = Color.Yellow
 

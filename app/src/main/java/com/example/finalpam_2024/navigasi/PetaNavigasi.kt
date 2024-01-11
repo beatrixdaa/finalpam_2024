@@ -33,6 +33,36 @@ import com.example.finalpam_2024.halaman.ItemEditScreen
 import com.example.finalpam_2024.ui.screen.LoginScreen
 import com.example.finalpam_2024.ui.screen.SignUpScreen
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FilmTopAppBar(
+    title:String,
+    canNavigateBack: Boolean,
+    modifier: Modifier = Modifier,
+    scrollBehavior: TopAppBarScrollBehavior? = null,
+    navigateUp:() -> Unit = {}
+){
+    CenterAlignedTopAppBar(title =  { Text(title) },
+        modifier = modifier,
+        scrollBehavior=scrollBehavior,
+        navigationIcon = {
+            if (canNavigateBack) {
+                IconButton(onClick = navigateUp) {
+                    Icon(
+                        imageVector = Icons.Filled.ArrowBack,
+                        contentDescription = stringResource(id = R.string.back)
+                    )
+                }
+            }
+        }
+    )
+
+}
+@Composable
+fun FilmApp(navController: NavHostController = rememberNavController()){
+    HostNavigasi(navController=navController)
+}
+
 
 @Composable
 fun HostNavigasi(
