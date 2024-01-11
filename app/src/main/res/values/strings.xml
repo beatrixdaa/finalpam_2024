@@ -23,6 +23,7 @@
     <string name="deskripsi_film">* Deskripsi Film</string>
     <string name="sign_up">* Sign Up</string>
     <string name="email">* Email</string>
+    <string name="search">* Search</string>
     <string name="login">* login</string>
     <string name="username">* Username</string>
     <string name="password">* Password</string>
