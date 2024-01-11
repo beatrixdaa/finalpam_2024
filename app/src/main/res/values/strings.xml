@@ -24,4 +24,7 @@
     <string name="genre">* gre</string>
     <string name="tahun_rilis">*tr</string>
     <string name="id">* i</string>
+    <string name="login">* login</string>
+    <string name="username">* Username</string>
+    <string name="password">* Password</string>
 </resources>
