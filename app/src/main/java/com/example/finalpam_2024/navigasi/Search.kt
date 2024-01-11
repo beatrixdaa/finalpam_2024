@@ -1,4 +1,4 @@
-package com.example.finalpam_2024.ui.screen
+package com.example.finalpam_2024.navigasi
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.sp
 
 
 @Composable
-fun MyApp(modifier: Modifier = Modifier, list: List<String>) {
+fun filmApp(modifier: Modifier = Modifier, list: List<String>) {
     Column(modifier.fillMaxSize()) {
 
         val textState = remember {
