@@ -5,5 +5,14 @@ import kotlinx.coroutines.flow.Flow
 
 interface RepositoriMember {
 
-    fun getMemberStream(id: Int): Flow<Member?>
+
+    fun getAllMemberStream(): Flow<List<Member>>
+
+    fun getMemebertream(id: Int): Flow<Member?>
+
+    suspend fun insertMember(Member: Member)
+
+    suspend fun deleteMember(Member: Member)
+
+    suspend fun updateMember(Member: Member)
 }
