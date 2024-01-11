@@ -1,4 +1,4 @@
-package com.example.finalpam_2024.ui.screen
+package com.example.finalpam_2024.halaman
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
@@ -32,8 +32,8 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.finalpam_2024.R
+import com.example.finalpam_2024.model.SignUpViewModel
 import com.example.finalpam_2024.navigasi.DestinasiNavigasi
-import com.example.finalpam_2024.ui.model.SignUpViewModel
 import kotlinx.coroutines.launch
 
 object DestinasiSignUp: DestinasiNavigasi {
@@ -62,7 +62,7 @@ fun SignUpScreen(navigateToLogin: () -> Unit) {
         Text(
             text = stringResource(R.string.sign_up),
             style = MaterialTheme.typography.headlineMedium,
-            color = Color.Yellow
+            color = Color.Black
         )
         Spacer(modifier = Modifier.height(10.dp))
 

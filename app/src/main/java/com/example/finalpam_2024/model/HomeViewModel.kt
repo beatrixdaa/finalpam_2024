@@ -2,6 +2,7 @@ package com.example.finalpam_2024.model
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.room.Query
 import com.example.finalpam_2024.data.Film
 import com.example.finalpam_2024.repositori.RepositoriFilm
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -13,6 +14,8 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class HomeViewModel(private val repositoriFilm: RepositoriFilm): ViewModel(){
+
+
     companion object {
         private const val  TIMEOUT_MILLIS = 10_000L
     }
@@ -29,4 +32,6 @@ class HomeViewModel(private val repositoriFilm: RepositoriFilm): ViewModel(){
     )
 
 
-    }
+
+
+}
