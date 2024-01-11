@@ -71,12 +71,12 @@ fun HostNavigasi(
 ){
     NavHost(
         navController = navController,
-        startDestination = DestinasiHome.route,
+        startDestination = "login",
         modifier = Modifier
     ) {
         composable("login"){
             LoginScreen(
-                navigateToHome = {navController.navigate("home")},
+                navigateToHome = {navController.navigate(DestinasiHome.route)},
                 navigateToSignUp = {navController.navigate("signup")}
             )
         }
