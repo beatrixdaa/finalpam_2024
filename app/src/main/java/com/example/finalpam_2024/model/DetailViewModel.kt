@@ -37,5 +37,5 @@ class DetailsViewModel(
 
 data class ItemDetailUiState (
     val outOfStock: Boolean = true,
-    val detailFilm: UIStateFilm.DetailFilm = UIStateFilm.DetailFilm(),
+    val detailFilm: DetailFilm = DetailFilm(),
 )

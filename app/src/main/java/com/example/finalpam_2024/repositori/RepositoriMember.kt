@@ -8,7 +8,7 @@ interface RepositoriMember {
 
     fun getAllMemberStream(): Flow<List<Member>>
 
-    fun getMemebertream(id: Int): Flow<Member?>
+    fun getMemeberStream(id: Int): Flow<Member?>
 
     suspend fun insertMember(Member: Member)
 

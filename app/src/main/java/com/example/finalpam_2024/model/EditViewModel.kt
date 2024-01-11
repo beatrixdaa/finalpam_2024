@@ -24,7 +24,7 @@ class EditViewModel(
             FilmUiState = repositoriFilm.getFilmStream(itemId)
                 .filterNotNull()
                 .first()
-                .toUIStateFilm(true)
+                .toUiStateFilm(true)
         }
     }
     suspend fun updateFilm () {
@@ -36,19 +36,15 @@ class EditViewModel(
         }
     }
 
-    fun updateUiState (detailFilm: UIStateFilm.DetailFilm) {
+    fun updateUiState (detailFilm: DetailFilm) {
         FilmUiState = UIStateFilm(detailFilm = detailFilm, isEntryValid = validasiInput(detailFilm))
     }
 
-    private fun validasiInput(uiState: UIStateFilm.DetailFilm = FilmUiState.detailFilm ): Boolean {
+    private fun validasiInput(uiState: DetailFilm = FilmUiState.detailFilm ): Boolean {
         return with(uiState) {
-           judul.isNotBlank() &&genre.isNotBlank() && tahun_rilis.isNotBlank()
+            judul.isNotBlank() && genre.isNotBlank() && tahun_rilis.isNotBlank()
         }
     }
 }
-
-
-
-
 
 

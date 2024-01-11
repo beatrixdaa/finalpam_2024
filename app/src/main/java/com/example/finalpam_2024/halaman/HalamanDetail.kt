@@ -2,7 +2,6 @@ package com.example.finalpam_2024.halaman
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Arrangement.spacedBy
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -40,12 +39,13 @@ import com.example.finalpam_2024.data.Film
 import com.example.finalpam_2024.model.DetailsViewModel
 import com.example.finalpam_2024.model.ItemDetailUiState
 import com.example.finalpam_2024.model.PenyediaViewModel
+import com.example.finalpam_2024.model.toFilm
 import com.example.finalpam_2024.navigasi.FilmTopAppBar
 import kotlinx.coroutines.launch
 
 object DetailsDestination : DestinasiNavigasi {
     override val route = "item_detail"
-    override val titleRes =R.string.detail_Film
+    override val titleRes = R.string.detail_Film
     const val FilmIdArg = "itemId"
     val routeWithArgs = "$route/{$FilmIdArg}"
 
@@ -112,7 +112,7 @@ fun ItemDetails(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(dimensionResource(id = R.dimen.padding_medium)),
-            verticalArrangement =spacedBy(dimensionResource(id = R.dimen.padding_medium))
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium))
         ) {
             ItemDetailsRow(
                 labelResID = R.string.judul,
@@ -213,8 +213,8 @@ private fun DeleteConfirmationDialog(
     modifier : Modifier = Modifier
 ){
     AlertDialog(onDismissRequest = { /*Do nothing */ },
-        title = {Text(stringResource(R.string.attention ))},
-        text = {Text(stringResource(R.string.delete))},
+        title = { Text(stringResource(R.string.attention )) },
+        text = { Text(stringResource(R.string.delete)) },
         modifier = modifier,
         dismissButton = {
             TextButton(onClick = onDeleteConfirm) {
@@ -231,3 +231,4 @@ private fun DeleteConfirmationDialog(
         }
     )
 }
+

@@ -11,8 +11,9 @@ import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.finalpam_2024.R
 import com.example.finalpam_2024.halaman.DestinasiEntry
@@ -22,7 +23,7 @@ import com.example.finalpam_2024.halaman.HomeScreen
 
 @Composable
 fun FilmApp(navController: NavHostController = rememberNavController()){
-    HostNavigasi(navController=navController)
+    HostNavigasi(navController = navController)
 }
 
 
@@ -56,11 +57,10 @@ fun FilmTopAppBar(
 
 @Composable
 fun HostNavigasi(
-    navController: NavHostController,
+    navController : NavHostController,
     modifier: Modifier = Modifier
 ) {
-    NavHost(
-        navController = navController,
+    NavHost( navController = navController,
         startDestination = DestinasiHome.route,
         modifier = Modifier
     )
@@ -75,5 +75,3 @@ fun HostNavigasi(
         }
     }
 }
-
-

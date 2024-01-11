@@ -12,12 +12,12 @@ class EntryViewModel(private val repositoriFilm: RepositoriFilm): ViewModel(){
     var uiStateFilm by mutableStateOf(UIStateFilm())
         private set
 
-    private fun validasiInput(uiState: UIStateFilm.DetailFilm =uiStateFilm.detailFilm):Boolean {
+    private fun validasiInput(uiState:DetailFilm=uiStateFilm.detailFilm):Boolean {
         return with(uiState) {
-         judul.isNotBlank() && genre.isNotBlank() && tahun_rilis.isNotBlank()
+            judul.isNotBlank() &&genre.isNotBlank() && tahun_rilis.isNotBlank()
         }
     }
-    fun updateUiState(detailFilm: UIStateFilm.DetailFilm){
+    fun updateUiState(detailFilm:DetailFilm){
         uiStateFilm=
             UIStateFilm(detailFilm,isEntryValid = validasiInput(detailFilm))
     }
@@ -31,33 +31,26 @@ class EntryViewModel(private val repositoriFilm: RepositoriFilm): ViewModel(){
 data class  UIStateFilm(
     val detailFilm: DetailFilm = DetailFilm(),
     val isEntryValid: Boolean = false
-) {
-
-    data class DetailFilm(
-        val id: Int = 0,
-        val judul: String = "",
-        val genre: String = "",
-        val tahun_rilis: String = "",
-    ) {
-    }
-
-    fun Film.toFilm(): Film = Film(
-        id = id,
-        judul = judul,
-        genre = genre,
-        tahun_rilis = tahun_rilis
-    )
-
-    fun Film.toUiStateFilm(isEntryValid: Boolean = false): UIStateFilm = UIStateFilm(
-        detailFilm = this.toDetailFilm(),
-        isEntryValid = isEntryValid
-    )
-
-    fun Film.toDetailFilm(): DetailFilm = DetailFilm(
-        id = id,
-        judul = judul,
-        genre = genre,
-        tahun_rilis = tahun_rilis
-    )
-}
-
+)
+data class DetailFilm(
+    val id: Int = 0,
+    val judul:String = "",
+    val genre: String = "",
+    val tahun_rilis : String = "",
+)
+fun DetailFilm.toFilm(): Film=Film(
+    id=id,
+    judul=judul,
+   genre=genre,
+    tahun_rilis=tahun_rilis
+)
+fun Film.toUiStateFilm(isEntryValid: Boolean = false): UIStateFilm = UIStateFilm(
+    detailFilm=this.toDetailFilm(),
+    isEntryValid=isEntryValid
+)
+fun Film.toDetailFilm(): DetailFilm = DetailFilm(
+    id=id,
+    judul=judul,
+   genre=genre,
+   tahun_rilis =tahun_rilis
+)

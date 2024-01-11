@@ -1,8 +1,9 @@
 package com.example.finalpam_2024
 
+import ContainerApp
+import ContainerDataApp
 import android.app.Application
-import com.example.finalpam_2024.repository.ContainerApp
-import com.example.finalpam_2024.repository.ContainerDataApp
+
 
 class AplikasiFilm : Application(){
 

@@ -22,6 +22,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.finalpam_2024.R
+import com.example.finalpam_2024.model.DetailFilm
 import com.example.finalpam_2024.model.EntryViewModel
 import com.example.finalpam_2024.model.PenyediaViewModel
 import com.example.finalpam_2024.model.UIStateFilm
@@ -73,7 +74,7 @@ fun EntryFilmScreen(
 @Composable
 fun EntryFilmBody(
     uiStateFilm: UIStateFilm,
-    onFilmValueChange:(UIStateFilm.DetailFilm) -> Unit,
+    onFilmValueChange:(DetailFilm) -> Unit,
     onSaveClick: () -> Unit,
     modifier : Modifier = Modifier
 ){
@@ -84,7 +85,7 @@ fun EntryFilmBody(
         FormInputFilm(
             detailFilm = uiStateFilm.detailFilm,
             onValueChange = onFilmValueChange,
-            modifier=Modifier.fillMaxWidth()
+            modifier= Modifier.fillMaxWidth()
         )
         Button(
             onClick = onSaveClick,
@@ -100,9 +101,9 @@ fun EntryFilmBody(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormInputFilm(
-    detailFilm: UIStateFilm.DetailFilm,
+    detailFilm: DetailFilm,
     modifier: Modifier = Modifier,
-    onValueChange: (UIStateFilm.DetailFilm) -> Unit = {},
+    onValueChange: (DetailFilm) -> Unit = {},
     enabled: Boolean = true
 ) {
     Column (
@@ -112,7 +113,7 @@ fun FormInputFilm(
         OutlinedTextField(
             value = detailFilm.judul,
             onValueChange ={onValueChange(detailFilm.copy(judul=it))},
-            label = { Text(stringResource(id = R.string.judul))},
+            label = { Text(stringResource(id = R.string.judul)) },
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
             singleLine = true
@@ -120,7 +121,7 @@ fun FormInputFilm(
         OutlinedTextField(
             value = detailFilm.genre,
             onValueChange ={onValueChange(detailFilm.copy(genre=it))},
-            label = { Text(stringResource(id = R.string.genre))},
+            label = { Text(stringResource(id = R.string.genre)) },
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
             singleLine = true
@@ -128,7 +129,7 @@ fun FormInputFilm(
         OutlinedTextField(
             value = detailFilm.tahun_rilis,
             onValueChange ={onValueChange(detailFilm.copy(tahun_rilis =it))},
-            label = { Text(stringResource(id = R.string.tahun_rilis))},
+            label = { Text(stringResource(id = R.string.tahun_rilis)) },
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
             singleLine = true

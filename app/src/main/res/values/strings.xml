@@ -17,6 +17,7 @@
     <string name="attention">Perhatian</string>
     <string name="tanya">Apakah anda yakin menghapus ini?</string>
     <string name="detail_Film">Detail Film</string>
+    <string name="to_Film">Detail Film</string>
     <string name="edit_Film">Edit Film</string>
     <string name="required_field">* required fields</string>
     <string name="judul">* jdl</string>
