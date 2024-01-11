@@ -30,7 +30,7 @@ class DetailsViewModel(
         repositoriFilm.deleteFilm(uiState.value.detailFilm.toFilm())
     }
     companion object{
-        private const val TIMEOUT_MILLIS = 5_000L
+        private const val TIMEOUT_MILLIS = 10_000L
     }
 }
 

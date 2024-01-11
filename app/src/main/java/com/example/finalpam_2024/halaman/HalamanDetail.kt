@@ -133,6 +133,7 @@ fun ItemDetails(
                     )
                 )
             )
+
             ItemDetailsRow(
                 labelResID = R.string.tahun_rilis,
                 itemDetail = Film.tahun_rilis,

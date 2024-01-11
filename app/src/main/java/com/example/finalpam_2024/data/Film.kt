@@ -10,5 +10,6 @@ data class Film(
     val id : Int = 0,
     val judul : String,
     val genre : String,
-    val tahun_rilis : String
+    val tahun_rilis : String,
+
 )

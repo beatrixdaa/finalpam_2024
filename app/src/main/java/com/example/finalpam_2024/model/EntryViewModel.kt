@@ -36,13 +36,15 @@ data class DetailFilm(
     val id: Int = 0,
     val judul:String = "",
     val genre: String = "",
-    val tahun_rilis : String = "",
+    val tahun_rilis : String = ""
+
 )
 fun DetailFilm.toFilm(): Film=Film(
     id=id,
     judul=judul,
-   genre=genre,
-    tahun_rilis=tahun_rilis
+    genre=genre,
+    tahun_rilis = tahun_rilis
+
 )
 fun Film.toUiStateFilm(isEntryValid: Boolean = false): UIStateFilm = UIStateFilm(
     detailFilm=this.toDetailFilm(),
@@ -51,6 +53,7 @@ fun Film.toUiStateFilm(isEntryValid: Boolean = false): UIStateFilm = UIStateFilm
 fun Film.toDetailFilm(): DetailFilm = DetailFilm(
     id=id,
     judul=judul,
-   genre=genre,
-   tahun_rilis =tahun_rilis
+    genre=genre,
+    tahun_rilis =tahun_rilis,
+
 )
