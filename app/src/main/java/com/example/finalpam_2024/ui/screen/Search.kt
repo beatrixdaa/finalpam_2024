@@ -1,4 +1,4 @@
-package com.example.finalpam_2024.navigasi
+package com.example.finalpam_2024.ui.screen
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
@@ -24,7 +24,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-
 
 @Composable
 fun filmApp(modifier: Modifier = Modifier, list: List<String>) {
