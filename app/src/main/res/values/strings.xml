@@ -20,9 +20,9 @@
     <string name="to_Film">Detail Film</string>
     <string name="edit_Film">Edit Film</string>
     <string name="required_field">* required fields</string>
-    <string name="judul">* jdl</string>
-    <string name="genre">* gre</string>
-    <string name="tahun_rilis">*tr</string>
+    <string name="judul">* judul</string>
+    <string name="genre">* genre</string>
+    <string name="tahun_rilis">*tahun rilis</string>
     <string name="id">* i</string>
     <string name="sign_up">* i</string>
     <string name="email">* E</string>
